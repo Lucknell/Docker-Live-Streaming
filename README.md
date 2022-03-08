@@ -34,7 +34,7 @@ docker run -d --restart=always -p 21935:1935 -p 21936:1936 -p 21937:80\
 
 ### Content server
 
-To have the stream playable from your hosted site you will need to host the content stream somewhere that the web page can reach it. To put it simply if you host the web page on http://192.168.0.107:21937 your content url will be http://192.168.0.107:21936. If you are using a reverse proxy, you will need to host both of those servers in the reverse proxy config and provide the URL for that site to the docker container.
+To have the stream playable from your hosted site you will need to host the content stream somewhere that the web page can reach it. To put it simply if you host the web page on http://192.168.0.33:21937 your content url will be http://192.168.0.33:21936. If you are using a reverse proxy, you will need to host both of those servers in the reverse proxy config and provide the URL for that site to the docker container.
 
 To know what your `CONTENT_URL` should be:
 | Hosting | Content URL | Example |
