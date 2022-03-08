@@ -21,6 +21,17 @@ docker run -d --restart=always -p 21935:1935 -p 21936:1936 -p 21937:80\
 --name stream streaming:latest
 ~~~
 
+### Example
+
+~~~
+docker build -t streaming:latest .
+docker run -d --restart=always -p 21935:1935 -p 21936:1936 -p 21937:80\
+-e CONTENT_URL=https://content.mysite.duckdns.org\
+-e STREAM_KEY=ISecretlyLove50Cent\
+-e SERVER_IP=192.168.0.33\
+--name stream streaming:latest
+~~~
+
 To know what your `CONTENT_URL` should be:
 | Hosting | Content URL | Example |
 | --- | --- | --- |
