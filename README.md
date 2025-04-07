@@ -14,10 +14,10 @@ This container is based off of the information in this [blog post](https://theno
 To build this container after cloning this repo just run the following commands inside the cloned folder. 
 ~~~
 docker build -t streaming:latest .
-docker run -d --restart=always -p 21935:1935 -p 21936:1936 -p 21937:80\
--e CONTENT_URL=<the url of where the content will be hosted>\
--e STREAM_KEY=<stream key for obs>\
--e SERVER_IP=<ip address of the host running this container>\
+docker run -d --restart=always -p 21935:1935 -p 21936:1936 -p 21937:80 \
+-e CONTENT_URL=<the url of where the content will be hosted> \
+-e STREAM_KEY=<stream key for obs> \
+-e SERVER_IP=<ip address of the host running this container> \
 --name stream streaming:latest
 ~~~
 
@@ -25,10 +25,10 @@ docker run -d --restart=always -p 21935:1935 -p 21936:1936 -p 21937:80\
 
 ~~~
 docker build -t streaming:latest .
-docker run -d --restart=always -p 21935:1935 -p 21936:1936 -p 21937:80\
--e CONTENT_URL=https://content.mysite.duckdns.org\
--e STREAM_KEY=ISecretlyLove50Cent\
--e SERVER_IP=192.168.0.33\
+docker run -d --restart=always -p 21935:1935 -p 21936:1936 -p 21937:80 \
+-e CONTENT_URL=https://content.mysite.duckdns.org \
+-e STREAM_KEY=ISecretlyLove50Cent \
+-e SERVER_IP=192.168.0.33 \
 --name stream streaming:latest
 ~~~
 
